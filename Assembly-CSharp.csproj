@@ -71,6 +71,7 @@
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\Hovl_Laser.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_RaycastInstance.cs" />
+    <Compile Include="Assets\Prefabs\bulletscript.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_ProjectileMover2D.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_DemoShooting.cs" />

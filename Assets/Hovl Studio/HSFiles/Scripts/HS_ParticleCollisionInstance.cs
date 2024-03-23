@@ -44,5 +44,11 @@ public class HS_ParticleCollisionInstance : MonoBehaviour
         {
             Destroy(gameObject, DestroyTimeDelay + 0.5f);
         }
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log(other.gameObject.name);
+            Destroy(other.gameObject);
+        }
+
     }
 }
