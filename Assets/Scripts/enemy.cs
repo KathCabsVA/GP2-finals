@@ -7,24 +7,21 @@ using UnityEngine.AI;
 public class enemy : MonoBehaviour
 {
 
-    public Player player;
     //for healthbar
     public int damage;
-
-    public GameObject playerobject;
-
+    public Player playerScript;
     //public Player player;
 
     public NavMeshAgent agent;
-    public Transform player;
+    public Transform playerTransform;
 
     public float moveSpeed;
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerScript = FindObjectOfType<Player>();
 
     }
 
@@ -42,15 +39,15 @@ public class enemy : MonoBehaviour
 
         //transform.position = Vector3.MoveTowards(transform.position, newplayer.position, moveSpeed * Time.deltaTime);
         //Debug.DrawLine(transform.position, newplayer.position, Color.red);
-        agent.SetDestination(player.position);
+        agent.SetDestination(playerTransform.position);
     }
     //pag nag collide sa player destroy enemy object
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-            playerobject.TakeDamage(damage);
+            playerScript.TakeDamage(damage);
         }
     }
 }
