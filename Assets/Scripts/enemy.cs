@@ -3,8 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class enemy : MonoBehaviour
 {
+
+    public Player player;
+    //for healthbar
+    public int damage;
+
+    public GameObject playerobject;
+
+    //public Player player;
 
     public NavMeshAgent agent;
     public Transform player;
@@ -15,6 +24,8 @@ public class enemy : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+
     }
 
     // Update is called once per frame
@@ -39,6 +50,7 @@ public class enemy : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
+            playerobject.TakeDamage(damage);
         }
     }
 }
