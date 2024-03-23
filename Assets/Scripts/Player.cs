@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public GameObject GameOverScreen;
+
     //public GameObject Enemy;
 
     // Start is called before the first frame update
@@ -17,11 +19,13 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        GameOver();
 
         //add here if condition when enemy prefab collides with player, take damage(1)
     }
@@ -37,7 +41,10 @@ public class Player : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            
             //prompt the settings-like message that says game over!
+            GameOverScreen.SetActive(true);
+            Time.timeScale = 0f;
         }
     }    
 }
