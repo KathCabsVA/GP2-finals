@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public AudioClip[] audioClip;
+
+    public AudioSource audioSource;
 
     public int maxHealth = 100;
     public int currentHealth;
@@ -13,6 +16,8 @@ public class Player : MonoBehaviour
 
     public GameObject GameOverScreen;
 
+    public GameObject InfoMessage; //ilagay dito yung "shoot all the Mori Calliopes. Press W to proceed"
+
     //public GameObject Enemy;
 
     // Start is called before the first frame update
@@ -20,6 +25,7 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        Time.timeScale = 0f; //freezes time
 
     }
 
@@ -27,7 +33,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         GameOver();
-
+        ToStartPressW();
         //add here if condition when enemy prefab collides with player, take damage(1)
     }
 
@@ -37,15 +43,39 @@ public class Player : MonoBehaviour
 
         healthBar.SetHealth(currentHealth);
     }
+    
+    public void ToStartPressW()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            InfoMessage.SetActive(false);
+            Time.timeScale = 1f; //starts time
+            //sfx
+            audioSource.PlayOneShot(audioClip[0]);
+        }
+    }
 
-    void GameOver()
+    public void GameOver()
     {
         if (currentHealth <= 0)
         {
             
             //prompt the settings-like message that says game over!
             GameOverScreen.SetActive(true);
-            Time.timeScale = 0f;
+            Time.timeScale = 0f; //freezes time
+            //add a condition to go back to main menu by pressing a Key
+
+            if (Input.GetKeyDown("space"))
+            {
+                SceneManager.LoadScene("Menu");
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                SceneManager.LoadScene("Game");
+                Time.timeScale = 1f; //starts time
+            }
+
         }
     }    
 }
