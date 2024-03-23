@@ -15,6 +15,7 @@ public class enemySpawner : MonoBehaviour
     private void Start()
     {
         spawnCorotine = StartCoroutine(SpawnEnemies());
+        Debug.Log("start Spawn");
     }
 
     IEnumerator SpawnEnemies()
