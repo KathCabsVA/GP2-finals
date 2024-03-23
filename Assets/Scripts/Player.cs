@@ -49,9 +49,10 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             InfoMessage.SetActive(false);
-            Time.timeScale = 1f; //starts time
             //sfx
+            Time.timeScale = 1f; //starts time
             audioSource.PlayOneShot(audioClip[0]);
+
         }
     }
 
@@ -74,6 +75,7 @@ public class Player : MonoBehaviour
             {
                 SceneManager.LoadScene("Game");
                 Time.timeScale = 1f; //starts time
+                audioSource.PlayOneShot(audioClip[0]);
             }
 
         }
