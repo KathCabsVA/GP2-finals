@@ -17,6 +17,7 @@ public class Gun : MonoBehaviour
     void Start()
     {
         _input = transform.root.GetComponent<StarterAssetsInputs>();
+
     }
 
     // Update is called once per frame
@@ -26,6 +27,8 @@ public class Gun : MonoBehaviour
         {
             Shoot();
         }
+
+
     }
 
     void Shoot()
@@ -35,4 +38,6 @@ public class Gun : MonoBehaviour
         bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
         Destroy(bullet, 1);
     }
+
+
 }
