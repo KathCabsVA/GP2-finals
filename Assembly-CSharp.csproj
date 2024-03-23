@@ -778,10 +778,6 @@
       <Project>{DFF173A1-2A3D-7E40-641C-ABF070A45370}</Project>
       <Name>com.unity.cinemachine.editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.csproj">
-      <Project>{60FBB5E6-C49C-2EF3-77DF-7E278A5E4742}</Project>
-      <Name>Unity.AI.Navigation</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Burst.Editor.csproj">
       <Project>{3F09378D-F423-7412-3680-EE87BC9EEDEE}</Project>
       <Name>Unity.Burst.Editor</Name>
@@ -846,10 +842,6 @@
       <Project>{F992F7E1-6809-4ADF-5593-603E079E3A0E}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Updater.csproj">
-      <Project>{AD5C7935-7964-FE97-D999-A0C580761D1B}</Project>
-      <Name>Unity.AI.Navigation.Updater</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
       <Project>{9DD99DB0-32A3-D7A4-245B-F35787A51CDA}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
@@ -870,17 +862,9 @@
       <Project>{3320E60F-6D4D-6A7E-6322-EEDA627CACFE}</Project>
       <Name>Unity.Searcher.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Editor.csproj">
-      <Project>{C6CACC50-67DC-6993-ED11-31BC3F8ADC05}</Project>
-      <Name>Unity.AI.Navigation.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{12FBE942-A3A7-ACF6-96DB-D08082B56A62}</Project>
       <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
-      <Project>{BA70C1FB-76F8-A4B8-98D7-D886A5AA5CE8}</Project>
-      <Name>Unity.AI.Navigation.Editor.ConversionSystem</Name>
     </ProjectReference>
     <ProjectReference Include="Cinemachine.csproj">
       <Project>{923B8300-9494-2EB9-E7C2-177C94B47FB7}</Project>
