@@ -22,12 +22,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    TakeDamage(1);
-        //}
-
-
 
         //add here if condition when enemy prefab collides with player, take damage(1)
     }
@@ -38,4 +32,12 @@ public class Player : MonoBehaviour
 
         healthBar.SetHealth(currentHealth);
     }
+
+    void GameOver()
+    {
+        if (currentHealth <= 0)
+        {
+            //prompt the settings-like message that says game over!
+        }
+    }    
 }
